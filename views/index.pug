@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  form(method="POST" action="/")
+    label(for="userText") Enter your text here:
+    br
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+  if message
+    p=message
+  br
+  br
+  h1 Examples
+  form(method="POST" action="/")
+    label(for="exText") Enter your text here:
+    br
+    input(type="text" id="exText" name="exText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+  if message
+    p=message
